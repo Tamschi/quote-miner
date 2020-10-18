@@ -1,0 +1,5 @@
+/secrets
+/target
+/quote-miner config.taml
+*.dot
+*.dot.*

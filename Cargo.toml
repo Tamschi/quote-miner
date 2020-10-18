@@ -1,0 +1,45 @@
+[package]
+name = "quote-miner"
+version = "0.0.1"
+authors = ["Tamme Schichler <tamme@schichler.dev>"]
+edition = "2018"
+# description = "TODO_DESCRIPTION"
+license = "MIT OR Apache-2.0"
+repository = "https://github.com/Tamschi/quote-miner"
+homepage = "https://github.com/Tamschi/quote-miner/tree/v0.0.1"
+documentation = "https://docs.rs/quote-miner/0.0.1"
+keywords = [] #TODO
+categories = [] #TODO
+readme = "README.md"
+include = [
+	"**/*.rs",
+	"!tests/unincluded_*.rs", # Tests of meta data files not included in the package.
+	"Cargo.toml",
+	"CHANGELOG.md",
+	"CODE_OF_CONDUCT.md",
+	"LICENSE-*",
+	"README.md",
+]
+publish = false
+
+[badges]
+travis-ci = { repository = "Tamschi/quote-miner", branch = "develop" }
+is-it-maintained-issue-resolution = { repository = "Tamschi/quote-miner" }
+is-it-maintained-open-issues = { repository = "Tamschi/quote-miner" }
+maintenance = { status = "experimental" }
+
+[dependencies]
+ctrlc = "3.1.7"
+dot = "0.1.4"
+egg-mode = { version = "0.15.0", features = ["rustls"], default-features = false }
+maplit = "1.0.2"
+structopt = "0.3.20"
+tokio = { version = "0.2", features = ["fs"] }
+try_match = "0.2.2"
+wyz = "0.2.0"
+
+[dev-dependencies]
+cargo-husky = "1.5.0"
+doc-comment = "0.3.3"
+git_info = "0.1.2"
+version-sync = "0.9.1"
