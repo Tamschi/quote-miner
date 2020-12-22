@@ -1,6 +1,5 @@
 #![doc(html_root_url = "https://docs.rs/quote-miner/0.0.1")]
 #![warn(clippy::pedantic)]
-
 //TODO:
 #![allow(dead_code)]
 
