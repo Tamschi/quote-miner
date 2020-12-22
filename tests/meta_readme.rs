@@ -1,8 +1,9 @@
 #![cfg(not(miri))]
 
 #[test]
+#[ignore = "This isn't read at all."]
 fn installation() {
-	version_sync::assert_contains_regex!("README.md", "^cargo add {name}$");
+	version_sync::assert_contains_regex!("README.md", "^cargo install {name}$");
 }
 
 #[test]

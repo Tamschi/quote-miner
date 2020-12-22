@@ -5,7 +5,7 @@
 [![Docs.rs](https://docs.rs/quote-miner/badge.svg)](https://docs.rs/crates/quote-miner)
 
 ![Rust 1.40.0](https://img.shields.io/static/v1?logo=Rust&label=&message=1.40.0&color=grey)
-[![Build Status](https://travis-ci.com/Tamschi/quote-miner.svg?branch=develop)](https://travis-ci.com/Tamschi/quote-miner/branches)
+[![CI](https://github.com/Tamschi/quote-miner/workflows/CI/badge.svg?branch=develop)](https://github.com/Tamschi/quote-miner/actions?query=workflow%3ACI+branch%3Adevelop)
 ![Crates.io - License](https://img.shields.io/crates/l/quote-miner/0.0.1)
 
 [![GitHub](https://img.shields.io/static/v1?logo=GitHub&label=&message=%20&color=grey)](https://github.com/Tamschi/quote-miner)
