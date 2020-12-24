@@ -37,18 +37,6 @@ jobs:
     - run: cargo +${{matrix.rust}} check ${{env.target}} ${{env.workspace}}
     - run: cargo +${{matrix.rust}} check ${{env.target}} ${{env.workspace}} --all-features
 
-  minimal-versions:
-    name: Minimal Versions
-    runs-on: ubuntu-latest
-    steps:
-    - uses: actions/checkout@v2
-    - uses: actions-rs/toolchain@v1
-      with:
-        toolchain: nightly
-    - run: cat CI.toml >> Cargo.toml
-    - run: cargo +nightly update -Z minimal-versions
-    - run: cargo +nightly check --bin quote-miner --all-features
-
   clippy:
     name: Clippy
     runs-on: ubuntu-latest
