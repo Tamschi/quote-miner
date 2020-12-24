@@ -22,10 +22,6 @@ jobs:
       matrix:
         os: [macos, ubuntu, windows]
         rust: [1.45.0, stable, beta, nightly] # Guessed minimum version
-        include:
-        - os: ubuntu
-          target: wasm32-unknown-unknown
-          no-workspace: --bin quote-miner
     env:
       target: ${{matrix.target && format('--target={0}', matrix.target)}}
       workspace: ${{matrix.no-workspace || '--workspace'}}
