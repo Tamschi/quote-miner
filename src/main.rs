@@ -77,7 +77,7 @@ async fn sleep_until(unix: i32) {
 	{
 		eprintln!("Sleeping for {:?}...", duration);
 		let duration = (duration + Duration::from_secs(5)).min(Duration::from_secs(10));
-		tokio::time::delay_for(duration).await;
+		tokio::time::sleep(duration).await;
 
 		if STOP.load(Ordering::SeqCst) {
 			break;
