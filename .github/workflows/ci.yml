@@ -10,7 +10,7 @@ jobs:
     name: Test
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v2
+    - uses: actions/checkout@v3.2.0
     - uses: actions-rs/toolchain@v1
     - run: cat CI.toml >> Cargo.toml
     - run: cargo test --workspace --all-features
@@ -26,7 +26,7 @@ jobs:
       target: ${{matrix.target && format('--target={0}', matrix.target)}}
       workspace: ${{matrix.no-workspace || '--workspace'}}
     steps:
-    - uses: actions/checkout@v2
+    - uses: actions/checkout@v3.2.0
     - uses: actions-rs/toolchain@v1
       with:
         toolchain: ${{matrix.rust}}
@@ -41,7 +41,7 @@ jobs:
     name: Clippy
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v2
+    - uses: actions/checkout@v3.2.0
     - uses: actions-rs/toolchain@v1
       with:
         toolchain: nightly
@@ -54,7 +54,7 @@ jobs:
     name: Formatting
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v2
+    - uses: actions/checkout@v3.2.0
     - uses: actions-rs/toolchain@v1
       with:
         toolchain: nightly
